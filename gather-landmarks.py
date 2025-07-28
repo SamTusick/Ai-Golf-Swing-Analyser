@@ -1,6 +1,18 @@
 import mediapipe as mp
-from mediapipe.tasks import python
-from mediapipe.tasks.python import vision
+import cv2
+import numpy as np
 
-model_path = "/Ai-Golf-Swing/Ai-Golf-Swing-Analyser/pose_landmarker_full.task"
+mp_drawing = mp.solutions.drawing_utils
+mp_pose = mp.solutions.pose
+
+cap = cv2.VideoCapture(0)
+while cap.isOpened():
+    ret, frame =cap.read()
+    cv2.imshow('MediaPipe Feed', frame)
+
+    if cv2.waitKey(10) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
 
