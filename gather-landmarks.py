@@ -5,13 +5,15 @@ import numpy as np
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
-# Video Feed
+# Video Upload
 video_upload = 'test-video.mp4'
 cap = cv2.VideoCapture(video_upload)
 
 if not cap.isOpened():
     print("Error: Could not open video file.")
     exit()
+else:
+    print("Success: File opened!")
 
 # Can bump up confidence leveles if needed in future
 with mp_pose.Pose(min_detection_confidence = 0.5, min_tracking_confidence = 0.5) as pose:
