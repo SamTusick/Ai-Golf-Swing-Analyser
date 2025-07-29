@@ -31,7 +31,7 @@
 - [ ] Actually grab landmarks (Right now we just can see them)
 - [ ] Create calculation branch
 - [ ] Use landmarks for calculations and measurements
-- [ ]Start gathering information for swing
+- [ ] Start gathering information for swing
 
 ## Important Ideas
 
