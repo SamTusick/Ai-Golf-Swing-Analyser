@@ -6,7 +6,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
 # Video Upload
-video_upload = 'test-video.mp4'
+video_upload = 'video-uploads/test-video.mp4'
 cap = cv2.VideoCapture(video_upload)
 
 if not cap.isOpened():
