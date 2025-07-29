@@ -7,7 +7,7 @@ mp_pose = mp.solutions.pose
 
 # Video Upload
 video_upload = 'video-uploads/test-video.mp4'
-cap = cv2.VideoCapture(video_upload)
+cap = cv2.VideoCapture(video_upload) # Update file to 0 for live stream
 
 if not cap.isOpened():
     print("Error: Could not open video file.")
@@ -40,6 +40,7 @@ with mp_pose.Pose(min_detection_confidence = 0.5, min_tracking_confidence = 0.5)
 
         cv2.imshow('MediaPipe Feed', image)
 
+        # Exit code for live streams
         if cv2.waitKey(10) & 0xFF == ord('q'):
             break
 
